@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+	<style type="text/css">
+	
+		*{
+			
+			font-family: 'Share Tech Mono', monospace;
+			font-size: 27px;
+			margin:0;
+		}
+		body{
+		/*display:flex;*/
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		/*background:#091921;*/
+	}
+	.calculator{
+		position: relative;
+		display: grid;
+		width:72vw;
+	
+	}
+	.calculator .value {
+		grid-column:span 4;
+		height: 18vh;
+		/*text-align: right;
+		border:none;
+		outline: none;
+		padding: 15px;*/
+		border: none;
+      background-color: #252525;
+      color: #fff;
+      text-align: right;
+     /* padding-right: 20px;
+      padding-left: 10px;*/
+      font-size: 5vw;
+	}
+	.calculator span {
+		display: grid;
+		width:18vw;
+		height:10vh;
+		color:#fff;
+		background:#0c2835;
+		transition: ease;
+		place-items:center;
+		border:1.5px solid rgba(0,0,0,.1);
+	}
+	.calculator span:active {
+		background:#74ff3b;
+		color:#111;
+	}
+	.calculator span.clear{
+		grid-column:span 2;
+		width:36vw;
+		background:#f00;
+	}
+	.calculator span.plus{
+		grid-row:span 2;
+		height:20vh;
+	}
+	.calculator span.equal{
+		background: #03b1ff;
+	}
+	</style>
+</head>
+<body>
+<div class="card bg-light">
+  <div class="card-body">
+    <h3 class="card-title">Calculator</h3>
+    <blockquote class=" blockquote" >
+    <p>He who codes a calculator..rules the world! </p>
+    <footer class="blockquote-footer">Aristotle's lost Son</footer>
+    </blockquote>
+    
+  </div>
+</div>
+	
+		<form name="calc" class="calculator mx-auto">
+				
+					<input type="text" class="value" name="txt" readonly="">
+					<span class="num clear" onclick="document.calc.txt.value = ''">c</span>
+					<span class="num" onclick="document.calc.txt.value += '/'">/</span>
+					<span class="num" onclick="document.calc.txt.value += '*'">*</span>
+					<span class="num" onclick="document.calc.txt.value += '7'">7</span>
+					<span class="num" onclick="document.calc.txt.value += '8'">8</span>
+					<span class="num" onclick="document.calc.txt.value += '9'">9</span>
+					<span class="num" onclick="document.calc.txt.value += '-'">-</span>
+					<span class="num" onclick="document.calc.txt.value += '4'">4</span>
+					<span class="num" onclick="document.calc.txt.value += '5'">5</span>
+					<span class="num" onclick="document.calc.txt.value += '6'">6</span>
+					<span class="num plus" onclick="document.calc.txt.value += '+'">+</span>
+					<span class="num" onclick="document.calc.txt.value += '3'">3</span>
+					<span class="num" onclick="document.calc.txt.value += '2'">2</span>
+					<span class="num" onclick="document.calc.txt.value +='1'">1</span>
+					<span class="num" onclick="document.calc.txt.value += '0'">0</span>
+					<span class="num" onclick="document.calc.txt.value += '00'">00</span>
+					<span class="num" onclick="document.calc.txt.value += '.'">.</span>
+					<span class="num equal" onclick="document.calc.txt.value= eval(calc.txt.value)">=</span>
+
+				
+			</form>
+			
+
+
+</body>
+</html>
